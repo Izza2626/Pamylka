@@ -1,0 +1,136 @@
+.industries-cta {
+  padding: 64px 32px;
+  background: #ffffff;
+  color: #132b2a;
+  border-top: 1px solid #dce8e7;
+}
+
+.industries-cta__container {
+  display: flex;
+  max-width: 1280px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  margin: 0 auto;
+}
+
+.industries-cta__content {
+  max-width: 680px;
+}
+
+.industries-cta__eyebrow {
+  display: block;
+  margin-bottom: 14px;
+  color: #087f7a;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.industries-cta__content h2 {
+  margin: 0 0 12px;
+  color: #132b2a;
+  font-size: clamp(30px, 3.5vw, 42px);
+  font-weight: 750;
+  line-height: 1.2;
+  letter-spacing: -1px;
+}
+
+.industries-cta__content p {
+  margin: 0;
+  color: #526665;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.industries-cta__actions {
+  display: flex;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.industries-cta__button {
+  display: inline-flex;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 0 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  transition:
+    background 200ms ease,
+    color 200ms ease,
+    border-color 200ms ease;
+}
+
+.industries-cta__button--primary {
+  background: #087f7a;
+  color: #ffffff;
+}
+
+.industries-cta__button--primary:hover {
+  background: #045c59;
+}
+
+.industries-cta__button--secondary {
+  border-color: #087f7a;
+  background: #ffffff;
+  color: #087f7a;
+}
+
+.industries-cta__button--secondary:hover {
+  background: #edf7f6;
+  border-color: #045c59;
+  color: #045c59;
+}
+
+.industries-cta__button:focus-visible {
+  outline: 2px solid #d4af37;
+  outline-offset: 4px;
+}
+
+@media (max-width: 850px) {
+  .industries-cta {
+    padding: 52px 26px;
+  }
+
+  .industries-cta__container {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .industries-cta {
+    padding: 42px 20px;
+  }
+
+  .industries-cta__content h2 {
+    font-size: 30px;
+  }
+
+  .industries-cta__content p {
+    font-size: 14px;
+  }
+
+  .industries-cta__actions {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .industries-cta__button {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .industries-cta__button {
+    transition: none;
+  }
+}

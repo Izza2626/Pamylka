@@ -1,0 +1,479 @@
+/* =========================================================
+   PAMYLKA ENGINEERING SERVICES
+   GLOBAL STYLES
+   ========================================================= */
+
+
+/* =========================================================
+   1. CSS RESET
+   ========================================================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   2. DOCUMENT
+   ========================================================= */
+
+html {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--header-height-desktop);
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-color: var(--color-white);
+  color: var(--color-text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+
+/* =========================================================
+   3. ROOT
+   ========================================================= */
+
+#root {
+  min-height: 100vh;
+  width: 100%;
+}
+
+
+/* =========================================================
+   4. BASIC ELEMENT RESET
+   ========================================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+button,
+input,
+textarea,
+select {
+  margin: 0;
+  font: inherit;
+}
+
+button {
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+img,
+picture,
+svg,
+video,
+canvas {
+  display: block;
+  max-width: 100%;
+}
+
+img {
+  height: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+
+/* =========================================================
+   5. LINKS
+   ========================================================= */
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+/* =========================================================
+   6. CONTAINER SYSTEM
+   ========================================================= */
+
+.container {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin-inline: auto;
+  padding-inline: var(--container-padding-desktop);
+}
+
+
+/* =========================================================
+   7. SECTION BASE
+   ========================================================= */
+
+.section {
+  width: 100%;
+  padding-block: var(--section-padding-desktop);
+}
+
+.section--white {
+  background-color: var(--color-white);
+}
+
+.section--soft {
+  background-color: var(--color-soft-background);
+}
+
+.section--teal {
+  background-color: var(--color-deep-teal);
+  color: var(--color-white);
+}
+
+
+/* =========================================================
+   8. CONTENT WIDTH HELPERS
+   ========================================================= */
+
+.content-narrow {
+  max-width: 720px;
+}
+
+.content-medium {
+  max-width: 900px;
+}
+
+.content-wide {
+  max-width: 1100px;
+}
+
+
+/* =========================================================
+   9. VISUALLY HIDDEN
+   Accessibility helper
+   ========================================================= */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+
+/* =========================================================
+   10. BUTTON BASE
+   ========================================================= */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+
+  min-height: var(--button-height);
+  padding-inline: var(--button-padding-horizontal);
+
+  border: 1px solid transparent;
+  border-radius: var(--button-radius);
+
+  font-family: var(--font-body);
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-semibold);
+  line-height: 1;
+
+  white-space: nowrap;
+
+  transition:
+    background-color var(--transition-standard),
+    border-color var(--transition-standard),
+    color var(--transition-standard),
+    transform var(--transition-standard),
+    box-shadow var(--transition-standard);
+}
+
+
+/* =========================================================
+   11. PRIMARY BUTTON
+   ========================================================= */
+
+.btn-primary {
+  background-color: var(--color-primary-teal);
+  color: var(--color-white);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-deep-teal);
+}
+
+
+/* =========================================================
+   12. SECONDARY BUTTON
+   ========================================================= */
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--color-primary-teal);
+  border-color: var(--color-primary-teal);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-light-teal-surface);
+}
+
+
+/* =========================================================
+   13. DARK BUTTON
+   ========================================================= */
+
+.btn-dark {
+  background-color: var(--color-deep-teal);
+  color: var(--color-white);
+}
+
+.btn-dark:hover {
+  background-color: var(--color-primary-teal);
+}
+
+
+/* =========================================================
+   14. GOLD ACCENT BUTTON
+   Use selectively
+   ========================================================= */
+
+.btn-gold {
+  background-color: var(--color-gold);
+  color: var(--color-deep-teal);
+}
+
+.btn-gold:hover {
+  background-color: var(--color-gold-light);
+}
+
+
+/* =========================================================
+   15. BUTTON DISABLED
+   ========================================================= */
+
+.btn:disabled,
+.btn[aria-disabled="true"] {
+  opacity: 0.55;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   16. FORM ELEMENTS
+   ========================================================= */
+
+input,
+textarea,
+select {
+  width: 100%;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-standard);
+  background-color: var(--color-white);
+  color: var(--color-text-primary);
+  outline: none;
+
+  transition:
+    border-color var(--transition-standard),
+    box-shadow var(--transition-standard);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--color-primary-teal);
+  box-shadow: var(--focus-ring);
+}
+
+
+/* =========================================================
+   17. PLACEHOLDER
+   ========================================================= */
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--color-text-muted);
+  opacity: 1;
+}
+
+
+/* =========================================================
+   18. KEYBOARD FOCUS
+   ========================================================= */
+
+:focus-visible {
+  outline: 3px solid rgba(8, 127, 122, 0.35);
+  outline-offset: 3px;
+}
+
+
+/* =========================================================
+   19. SELECTION
+   ========================================================= */
+
+::selection {
+  background-color: var(--color-light-teal);
+  color: var(--color-white);
+}
+
+
+/* =========================================================
+   20. HORIZONTAL RULE
+   ========================================================= */
+
+hr {
+  margin: 0;
+  border: 0;
+  border-top: 1px solid var(--color-border);
+}
+
+
+/* =========================================================
+   21. TABLE
+   ========================================================= */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+
+/* =========================================================
+   22. SVG
+   ========================================================= */
+
+svg {
+  flex-shrink: 0;
+}
+
+
+/* =========================================================
+   23. REDUCED MOTION
+   Accessibility
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+
+/* =========================================================
+   24. TABLET
+   768px - 1023px
+   ========================================================= */
+
+@media (max-width: 1023px) {
+
+  html {
+    scroll-padding-top: var(--header-height-mobile);
+  }
+
+  .container {
+    padding-inline: var(--container-padding-tablet);
+  }
+
+  .section {
+    padding-block: var(--section-padding-tablet);
+  }
+}
+
+
+/* =========================================================
+   25. MOBILE
+   Below 768px
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+  .container {
+    padding-inline: var(--container-padding-mobile);
+  }
+
+  .section {
+    padding-block: var(--section-padding-mobile);
+  }
+
+  .btn {
+    min-height: 48px;
+  }
+}
+
+
+/* =========================================================
+   26. SMALL MOBILE
+   Below 480px
+   ========================================================= */
+
+@media (max-width: 479px) {
+
+  .container {
+    padding-inline: var(--container-padding-small);
+  }
+}
+
+
+
+
+/* Subtle page entrance transition */
+.page-enter {
+  animation: pageEnter 380ms ease-out both;
+}
+
+@keyframes pageEnter {
+  from {
+    opacity: 0.88;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Respect reduced-motion accessibility preferences */
+@media (prefers-reduced-motion: reduce) {
+  .page-enter {
+    animation: none;
+  }
+}

@@ -1,0 +1,543 @@
+
+/* =========================================
+   INDUSTRIES HERO
+   PAMYLKA Engineering Services
+========================================= */
+
+.industries-hero {
+  --ih-teal: #087f7a;
+  --ih-deep-teal: #045c59;
+  --ih-teal-light: #16a6a0;
+  --ih-gold: #d4af37;
+  --ih-text: #132b2a;
+  --ih-secondary: #526665;
+  --ih-border: #dce8e7;
+  --ih-soft: #f7fafa;
+
+  position: relative;
+  width: 100%;
+  min-height: min(760px, calc(100svh - 80px));
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: 66px 0 76px;
+  background: #ffffff;
+  color: var(--ih-text);
+}
+
+.industries-hero *,
+.industries-hero *::before,
+.industries-hero *::after {
+  box-sizing: border-box;
+}
+
+.industries-hero__container {
+  position: relative;
+  z-index: 1;
+  width: min(100% - 64px, 1280px);
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1.04fr) minmax(0, 0.96fr);
+  align-items: center;
+  gap: clamp(42px, 6vw, 88px);
+}
+
+/* Content */
+
+.industries-hero__content {
+  position: relative;
+  z-index: 2;
+  max-width: 640px;
+}
+
+.industries-hero__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  margin-bottom: 23px;
+  color: var(--ih-teal);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+  line-height: 1.5;
+}
+
+.industries-hero__eyebrow-line {
+  width: 30px;
+  height: 2px;
+  flex-shrink: 0;
+  background: var(--ih-gold);
+}
+
+.industries-hero__content h1 {
+  margin: 0;
+  color: var(--ih-text);
+  font-size: clamp(40px, 4.15vw, 58px);
+  font-weight: 800;
+  letter-spacing: -2.5px;
+  line-height: 1.13;
+}
+
+.industries-hero__content h1 span {
+  color: var(--ih-teal);
+}
+
+.industries-hero__description {
+  max-width: 535px;
+  margin: 23px 0 0;
+  color: var(--ih-secondary);
+  font-size: 16px;
+  line-height: 1.95;
+}
+
+.industries-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 13px;
+  margin-top: 31px;
+}
+
+.industries-hero__primary-button,
+.industries-hero__secondary-button {
+  min-height: 49px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+  padding: 0 19px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: 750;
+  text-decoration: none;
+  transition:
+    background 180ms ease,
+    border-color 180ms ease,
+    color 180ms ease,
+    transform 180ms ease;
+}
+
+.industries-hero__primary-button {
+  background: var(--ih-deep-teal);
+  color: #ffffff;
+}
+
+.industries-hero__primary-button:hover {
+  transform: translateY(-2px);
+  background: var(--ih-teal);
+}
+
+.industries-hero__secondary-button {
+  border-color: var(--ih-border);
+  background: #ffffff;
+  color: var(--ih-deep-teal);
+}
+
+.industries-hero__secondary-button:hover {
+  transform: translateY(-2px);
+  border-color: var(--ih-teal);
+  background: var(--ih-soft);
+}
+
+.industries-hero__primary-button:focus-visible,
+.industries-hero__secondary-button:focus-visible {
+  outline: 3px solid rgba(22, 166, 160, 0.55);
+  outline-offset: 4px;
+}
+
+/* Footer note */
+
+.industries-hero__footer-note {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 43px;
+  color: #7a8c8a;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.industries-hero__footer-line {
+  width: 36px;
+  height: 1px;
+  flex-shrink: 0;
+  background: var(--ih-gold);
+}
+
+/* Image composition */
+
+.industries-hero__visual {
+  position: relative;
+  min-width: 0;
+  padding: 0 18px 23px 0;
+}
+
+.industries-hero__image-frame {
+  position: relative;
+  height: clamp(400px, 43vw, 535px);
+  overflow: hidden;
+  border-radius: 5px;
+  background: #e9f0ef;
+}
+
+.industries-hero__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  animation: industriesHeroImageIn 650ms ease-out both;
+}
+
+.industries-hero__image-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(3, 31, 30, 0.02) 40%,
+    rgba(3, 31, 30, 0.65) 100%
+  );
+  pointer-events: none;
+}
+
+.industries-hero__image-caption {
+  position: absolute;
+  right: 24px;
+  bottom: 24px;
+  left: 24px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  color: #ffffff;
+}
+
+.industries-hero__caption-mark {
+  width: 3px;
+  min-height: 38px;
+  flex-shrink: 0;
+  background: var(--ih-gold);
+}
+
+.industries-hero__caption-label {
+  display: block;
+  margin-bottom: 6px;
+  color: #f0d477;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  line-height: 1.5;
+}
+
+.industries-hero__image-caption p {
+  margin: 0;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+/* Floating information card */
+
+.industries-hero__floating-card {
+  position: absolute;
+  z-index: 3;
+  right: -12px;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: min(340px, calc(100% - 12px));
+  min-height: 95px;
+  padding: 19px 20px;
+  border: 1px solid var(--ih-border);
+  border-radius: 6px;
+  background: #ffffff;
+  box-shadow: 0 14px 40px rgba(19, 43, 42, 0.12);
+}
+
+.industries-hero__floating-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  border: 1px solid rgba(212, 175, 55, 0.5);
+  border-radius: 5px;
+  background: #fbf8ed;
+  color: var(--ih-deep-teal);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.industries-hero__floating-content {
+  display: flex;
+  min-width: 0;
+  flex: 1;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.industries-hero__floating-content strong {
+  color: var(--ih-text);
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.5;
+}
+
+.industries-hero__floating-content span {
+  color: var(--ih-secondary);
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.industries-hero__floating-arrow {
+  flex-shrink: 0;
+  color: var(--ih-teal);
+}
+
+/* Decorative elements */
+
+.industries-hero__decor-grid {
+  position: absolute;
+  z-index: -1;
+  top: -28px;
+  right: -29px;
+  width: 112px;
+  height: 112px;
+  background-image: radial-gradient(
+    rgba(8, 127, 122, 0.35) 1.3px,
+    transparent 1.3px
+  );
+  background-size: 12px 12px;
+  opacity: 0.65;
+}
+
+.industries-hero__decor-dot {
+  position: absolute;
+  z-index: 2;
+  top: 45px;
+  left: -13px;
+  width: 17px;
+  height: 17px;
+  border: 4px solid #ffffff;
+  border-radius: 50%;
+  background: var(--ih-gold);
+  box-shadow: 0 0 0 1px rgba(212, 175, 55, 0.3);
+}
+
+/* Entrance animation */
+
+@keyframes industriesHeroImageIn {
+  from {
+    opacity: 0.6;
+    transform: scale(1.035);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (min-width: 1440px) {
+  .industries-hero__container {
+    width: min(100% - 80px, 1320px);
+  }
+}
+
+@media (max-width: 1100px) {
+  .industries-hero {
+    padding: 60px 0 70px;
+  }
+
+  .industries-hero__container {
+    width: calc(100% - 48px);
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
+    gap: 35px;
+  }
+
+  .industries-hero__content h1 {
+    font-size: clamp(38px, 4.6vw, 50px);
+    letter-spacing: -1.8px;
+  }
+
+  .industries-hero__description {
+    font-size: 14px;
+  }
+
+  .industries-hero__image-frame {
+    height: 420px;
+  }
+
+  .industries-hero__floating-card {
+    right: -7px;
+    width: min(320px, calc(100% - 5px));
+    padding: 15px;
+  }
+}
+
+@media (max-width: 760px) {
+  .industries-hero {
+    min-height: auto;
+    padding: 58px 0 66px;
+  }
+
+  .industries-hero__container {
+    width: calc(100% - 40px);
+    grid-template-columns: 1fr;
+    gap: 43px;
+  }
+
+  .industries-hero__content {
+    max-width: 620px;
+  }
+
+  .industries-hero__content h1 {
+    font-size: clamp(39px, 7.3vw, 53px);
+    letter-spacing: -1.8px;
+  }
+
+  .industries-hero__description {
+    max-width: 580px;
+    font-size: 15px;
+  }
+
+  .industries-hero__footer-note {
+    margin-top: 30px;
+  }
+
+  .industries-hero__visual {
+    width: calc(100% - 8px);
+    margin-right: 8px;
+  }
+
+  .industries-hero__image-frame {
+    height: clamp(340px, 68vw, 460px);
+  }
+
+  .industries-hero__floating-card {
+    right: -8px;
+    width: min(340px, calc(100% - 10px));
+  }
+
+  .industries-hero__decor-grid {
+    right: -20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .industries-hero {
+    padding: 43px 0 52px;
+  }
+
+  .industries-hero__container {
+    width: calc(100% - 32px);
+    gap: 34px;
+  }
+
+  .industries-hero__eyebrow {
+    margin-bottom: 18px;
+    font-size: 9px;
+    letter-spacing: 1.35px;
+  }
+
+  .industries-hero__content h1 {
+    font-size: clamp(35px, 9vw, 42px);
+    letter-spacing: -1.45px;
+    line-height: 1.17;
+  }
+
+  .industries-hero__description {
+    margin-top: 17px;
+    font-size: 13px;
+    line-height: 1.85;
+  }
+
+  .industries-hero__actions {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 23px;
+  }
+
+  .industries-hero__primary-button,
+  .industries-hero__secondary-button {
+    width: 100%;
+    min-height: 47px;
+  }
+
+  .industries-hero__footer-note {
+    align-items: flex-start;
+    margin-top: 24px;
+    font-size: 11px;
+  }
+
+  .industries-hero__visual {
+    padding-right: 8px;
+    padding-bottom: 32px;
+  }
+
+  .industries-hero__image-frame {
+    height: 330px;
+  }
+
+  .industries-hero__image-caption {
+    right: 16px;
+    bottom: 18px;
+    left: 16px;
+  }
+
+  .industries-hero__image-caption p {
+    font-size: 11px;
+  }
+
+  .industries-hero__caption-label {
+    font-size: 8px;
+  }
+
+  .industries-hero__floating-card {
+    right: -8px;
+    bottom: 0;
+    gap: 11px;
+    min-height: 80px;
+    padding: 13px;
+  }
+
+  .industries-hero__floating-number {
+    width: 36px;
+    height: 36px;
+  }
+
+  .industries-hero__floating-content strong {
+    font-size: 12px;
+  }
+
+  .industries-hero__floating-content span {
+    font-size: 10px;
+  }
+
+  .industries-hero__decor-grid {
+    width: 85px;
+    height: 85px;
+    background-size: 10px 10px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .industries-hero__image {
+    animation: none;
+  }
+
+  .industries-hero *,
+  .industries-hero *::before,
+  .industries-hero *::after {
+    scroll-behavior: auto !important;
+    transition: none !important;
+  }
+}

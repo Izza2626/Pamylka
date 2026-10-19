@@ -1,0 +1,315 @@
+/* =========================================================
+   PAMYLKA ENGINEERING SERVICES
+   GLOBAL TYPOGRAPHY
+   ========================================================= */
+
+
+/* =========================================================
+   1. FONT IMPORTS
+   ========================================================= */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap");
+
+
+/* =========================================================
+   2. BASE TYPOGRAPHY
+   ========================================================= */
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-body);
+  color: var(--color-text-primary);
+}
+
+
+/* =========================================================
+   3. HEADINGS
+   ========================================================= */
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  font-family: var(--font-heading);
+  color: var(--color-text-primary);
+}
+
+
+/* =========================================================
+   4. DISPLAY TEXT
+   ========================================================= */
+
+.text-display {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-display);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-display);
+  letter-spacing: -0.03em;
+}
+
+
+/* =========================================================
+   5. H1
+   ========================================================= */
+
+h1,
+.text-h1 {
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-h1);
+  letter-spacing: -0.025em;
+}
+
+
+/* =========================================================
+   6. H2
+   ========================================================= */
+
+h2,
+.text-h2 {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-h2);
+  letter-spacing: -0.02em;
+}
+
+
+/* =========================================================
+   7. H3
+   ========================================================= */
+
+h3,
+.text-h3 {
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-h3);
+  letter-spacing: -0.015em;
+}
+
+
+/* =========================================================
+   8. H4
+   ========================================================= */
+
+h4,
+.text-h4 {
+  font-size: var(--font-size-h4);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-h4);
+}
+
+
+/* =========================================================
+   9. BODY LARGE
+   ========================================================= */
+
+.text-body-large {
+  font-size: var(--font-size-body-large);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-body-large);
+}
+
+
+/* =========================================================
+   10. BODY
+   ========================================================= */
+
+p,
+.text-body {
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-body);
+}
+
+
+/* =========================================================
+   11. SMALL TEXT
+   ========================================================= */
+
+.text-small {
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-small);
+}
+
+
+/* =========================================================
+   12. CAPTION / LABEL
+   ========================================================= */
+
+.text-caption {
+  font-size: var(--font-size-caption);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-caption);
+  letter-spacing: var(--letter-spacing-label);
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   13. TEXT WEIGHTS
+   ========================================================= */
+
+.font-regular {
+  font-weight: var(--font-weight-regular);
+}
+
+.font-medium {
+  font-weight: var(--font-weight-medium);
+}
+
+.font-semibold {
+  font-weight: var(--font-weight-semibold);
+}
+
+.font-bold {
+  font-weight: var(--font-weight-bold);
+}
+
+
+/* =========================================================
+   14. TEXT COLORS
+   ========================================================= */
+
+.text-primary {
+  color: var(--color-text-primary);
+}
+
+.text-secondary {
+  color: var(--color-text-secondary);
+}
+
+.text-muted {
+  color: var(--color-text-muted);
+}
+
+.text-white {
+  color: var(--color-text-white);
+}
+
+.text-teal {
+  color: var(--color-primary-teal);
+}
+
+.text-gold {
+  color: var(--color-gold);
+}
+
+
+/* =========================================================
+   15. LINKS
+   ========================================================= */
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+/* =========================================================
+   16. STRONG TEXT
+   ========================================================= */
+
+strong,
+b {
+  font-weight: var(--font-weight-semibold);
+}
+
+
+/* =========================================================
+   17. RESPONSIVE TYPOGRAPHY
+   ========================================================= */
+
+
+/* ---------- Tablet ---------- */
+
+@media (max-width: 1023px) {
+
+  .text-display {
+    font-size: 52px;
+  }
+
+  h1,
+  .text-h1 {
+    font-size: 44px;
+  }
+
+  h2,
+  .text-h2 {
+    font-size: 36px;
+  }
+
+  h3,
+  .text-h3 {
+    font-size: 24px;
+  }
+
+}
+
+
+/* ---------- Mobile ---------- */
+
+@media (max-width: 767px) {
+
+  .text-display {
+    font-size: 40px;
+    line-height: 1.12;
+  }
+
+  h1,
+  .text-h1 {
+    font-size: 36px;
+    line-height: 1.15;
+  }
+
+  h2,
+  .text-h2 {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+
+  h3,
+  .text-h3 {
+    font-size: 22px;
+    line-height: 1.25;
+  }
+
+  h4,
+  .text-h4 {
+    font-size: 20px;
+  }
+
+  .text-body-large {
+    font-size: 17px;
+  }
+
+}
+
+
+/* ---------- Small Mobile ---------- */
+
+@media (max-width: 479px) {
+
+  .text-display {
+    font-size: 36px;
+  }
+
+  h1,
+  .text-h1 {
+    font-size: 32px;
+  }
+
+  h2,
+  .text-h2 {
+    font-size: 28px;
+  }
+
+  h3,
+  .text-h3 {
+    font-size: 21px;
+  }
+
+}

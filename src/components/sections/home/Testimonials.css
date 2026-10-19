@@ -1,0 +1,661 @@
+/* =========================================================
+   PAMYLKA ENGINEERING SERVICES
+   TESTIMONIALS
+   ========================================================= */
+
+.testimonials {
+  position: relative;
+
+  padding: 96px 0;
+
+  overflow: hidden;
+
+  background: var(--color-white);
+}
+
+
+/* =========================================================
+   CONTAINER
+   ========================================================= */
+
+.testimonials__container {
+  width: min(
+    calc(100% - 64px),
+    1280px
+  );
+
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   SECTION HEADER
+   ========================================================= */
+
+.testimonials__header {
+  max-width: 760px;
+
+  margin: 0 auto !important;
+
+  text-align: center;
+}
+
+
+.testimonials__eyebrow {
+  display: inline-flex;
+  align-items: center;
+
+  margin-bottom: 14px;
+
+  color: var(--color-primary-teal);
+
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 700;
+
+  line-height: 1.4;
+
+  letter-spacing: 0.12em;
+}
+
+
+.testimonials__eyebrow::before {
+  content: "";
+
+  width: 22px;
+  height: 1px;
+
+  margin-right: 9px;
+
+  background: var(--color-gold);
+}
+
+
+.testimonials__header h2 {
+  margin: 0;
+
+  color: var(--color-primary-text);
+
+  font-family: var(--font-heading);
+  font-size: 42px;
+  font-weight: 700;
+
+  line-height: 1.15;
+
+  letter-spacing: -0.025em;
+}
+
+
+.testimonials__intro {
+  max-width: 580px;
+
+  margin: 14px auto 0;
+
+  color: var(--color-secondary-text);
+
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 400;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   CAROUSEL
+   ========================================================= */
+
+.testimonials__carousel {
+  position: relative;
+
+  max-width: 920px;
+
+  margin: 0 auto;
+
+  text-align: center;
+
+  outline: none;
+}
+
+
+.testimonials__carousel:focus-visible {
+  outline: 2px solid var(--color-gold);
+
+  outline-offset: 8px;
+
+  border-radius: var(--radius-sm);
+}
+
+
+/* =========================================================
+   TESTIMONIAL TEXT
+   ========================================================= */
+
+.testimonials__quote {
+  max-width: 780px;
+
+  min-height: 155px;
+
+  margin: 0 auto;
+
+  padding: 0 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  animation: testimonialFade 400ms ease both;
+}
+
+
+@keyframes testimonialFade {
+  from {
+    opacity: 0;
+
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
+
+.testimonials__quote p {
+  max-width: 760px;
+
+  margin: 0 auto;
+
+  color: var(--color-secondary-text);
+
+  font-family: var(--font-body);
+  font-size: 17px;
+  font-weight: 400;
+
+  line-height: 1.8;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   PEOPLE / AVATARS
+   ========================================================= */
+
+.testimonials__people {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 30px;
+
+  margin-top: 24px;
+}
+
+
+.testimonials__avatars {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 20px;
+}
+
+
+.testimonials__avatar-button {
+  width: 52px;
+  height: 52px;
+
+  padding: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 0;
+
+  background: transparent;
+
+  cursor: pointer;
+}
+
+
+.testimonials__avatar {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  color: var(--color-secondary-text);
+
+  transition:
+    width 220ms ease,
+    height 220ms ease,
+    color 220ms ease,
+    background-color 220ms ease,
+    border-color 220ms ease,
+    transform 220ms ease;
+}
+
+
+/* =========================================================
+   MALE AVATAR
+   ========================================================= */
+
+.testimonials__avatar.is-male {
+  background: var(--color-light-teal-surface);
+
+  border: 1px solid #C9E4E1;
+}
+
+
+/* =========================================================
+   FEMALE AVATAR
+   ========================================================= */
+
+.testimonials__avatar.is-female {
+  background: #F7F1F4;
+
+  border: 1px solid #E8D8DF;
+}
+
+
+/* =========================================================
+   ACTIVE AVATAR
+   ========================================================= */
+
+.testimonials__avatar-button.is-active {
+  width: 68px;
+  height: 68px;
+}
+
+
+.testimonials__avatar-button.is-active
+.testimonials__avatar {
+  width: 64px;
+  height: 64px;
+
+  border: 2px solid var(--color-primary-teal);
+
+  background: var(--color-white);
+
+  color: var(--color-deep-teal);
+
+  box-shadow:
+    0 0 0 5px var(--color-light-teal-surface);
+
+  transform: scale(1.02);
+}
+
+
+/* =========================================================
+   ARROWS
+   ========================================================= */
+
+.testimonials__arrow {
+  width: 36px;
+  height: 36px;
+
+  flex: 0 0 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: 1px solid var(--color-border);
+
+  border-radius: 50%;
+
+  background: var(--color-white);
+
+  color: var(--color-deep-teal);
+
+  cursor: pointer;
+
+  transition:
+    color 180ms ease,
+    background-color 180ms ease,
+    border-color 180ms ease,
+    transform 180ms ease;
+}
+
+
+.testimonials__arrow:hover {
+  border-color: var(--color-primary-teal);
+
+  background: var(--color-light-teal-surface);
+
+  color: var(--color-deep-teal);
+
+  transform: translateY(-1px);
+}
+
+
+.testimonials__arrow:active {
+  transform: translateY(0);
+}
+
+
+.testimonials__arrow:focus-visible {
+  outline: 2px solid var(--color-gold);
+
+  outline-offset: 3px;
+}
+
+
+/* =========================================================
+   ACTIVE PERSON
+   ========================================================= */
+
+.testimonials__person {
+  margin-top: 12px;
+
+  animation: personFade 300ms ease both;
+}
+
+
+@keyframes personFade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+.testimonials__person h3 {
+  margin: 0;
+
+  color: var(--color-primary-text);
+
+  font-family: var(--font-heading);
+  font-size: 15px;
+  font-weight: 700;
+
+  line-height: 1.4;
+}
+
+
+.testimonials__person p {
+  margin: 4px 0 0;
+
+  color: var(--color-muted-text);
+
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 500;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   DOT NAVIGATION
+   ========================================================= */
+
+.testimonials__dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 6px;
+
+  margin-top: 24px;
+}
+
+
+.testimonials__dot {
+  width: 6px;
+  height: 6px;
+
+  padding: 0;
+
+  border: 0;
+
+  border-radius: 50%;
+
+  background: var(--color-border);
+
+  cursor: pointer;
+
+  transition:
+    width 180ms ease,
+    background-color 180ms ease;
+}
+
+
+.testimonials__dot.is-active {
+  width: 20px;
+
+  border-radius: var(--radius-pill);
+
+  background: var(--color-primary-teal);
+}
+
+
+.testimonials__dot:focus-visible {
+  outline: 2px solid var(--color-gold);
+
+  outline-offset: 3px;
+}
+
+
+/* =========================================================
+   TABLET
+   768px – 1023px
+   ========================================================= */
+
+@media (max-width: 1023px) {
+
+  .testimonials {
+    padding: 80px 0;
+  }
+
+
+  .testimonials__container {
+    width: calc(100% - 48px);
+  }
+
+
+  .testimonials__header h2 {
+    font-size: 36px;
+  }
+
+
+  .testimonials__quote p {
+    font-size: 16px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   < 768px
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+  .testimonials {
+    padding: 64px 0;
+  }
+
+
+  .testimonials__container {
+    width: calc(100% - 40px);
+  }
+
+
+  .testimonials__header {
+    margin-bottom: 32px;
+  }
+
+
+  .testimonials__header h2 {
+    font-size: 32px;
+
+    line-height: 1.2;
+  }
+
+
+  .testimonials__intro {
+    font-size: 15px;
+  }
+
+
+  .testimonials__quote {
+    min-height: 210px;
+
+    padding: 0 8px;
+  }
+
+
+  .testimonials__quote p {
+    font-size: 15px;
+
+    line-height: 1.75;
+  }
+
+
+  .testimonials__people {
+    gap: 16px;
+
+    margin-top: 12px;
+  }
+
+
+  .testimonials__avatars {
+    gap: 10px;
+  }
+
+
+  .testimonials__avatar-button {
+    width: 46px;
+    height: 46px;
+  }
+
+
+  .testimonials__avatar {
+    width: 42px;
+    height: 42px;
+  }
+
+
+  .testimonials__avatar-button.is-active {
+    width: 58px;
+    height: 58px;
+  }
+
+
+  .testimonials__avatar-button.is-active
+  .testimonials__avatar {
+    width: 54px;
+    height: 54px;
+  }
+
+
+  .testimonials__arrow {
+    width: 34px;
+    height: 34px;
+
+    flex-basis: 34px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   < 480px
+   ========================================================= */
+
+@media (max-width: 479px) {
+
+  .testimonials__container {
+    width: calc(100% - 32px);
+  }
+
+
+  .testimonials__header h2 {
+    font-size: 29px;
+  }
+
+
+  .testimonials__quote {
+    min-height: 230px;
+  }
+
+
+  .testimonials__quote p {
+    font-size: 14px;
+  }
+
+
+  .testimonials__people {
+    gap: 8px;
+  }
+
+
+  .testimonials__avatars {
+    gap: 6px;
+  }
+
+
+  .testimonials__arrow {
+    width: 32px;
+    height: 32px;
+
+    flex-basis: 32px;
+  }
+
+
+  .testimonials__avatar-button {
+    width: 43px;
+    height: 43px;
+  }
+
+
+  .testimonials__avatar {
+    width: 39px;
+    height: 39px;
+  }
+
+
+  .testimonials__avatar-button.is-active {
+    width: 54px;
+    height: 54px;
+  }
+
+
+  .testimonials__avatar-button.is-active
+  .testimonials__avatar {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .testimonials *,
+  .testimonials *::before,
+  .testimonials *::after {
+    animation-duration: 0.01ms !important;
+
+    animation-iteration-count: 1 !important;
+
+    transition-duration: 0.01ms !important;
+  }
+}

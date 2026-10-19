@@ -1,0 +1,594 @@
+.about-preview {
+  position: relative;
+  padding: var(--section-padding-desktop) 0;
+  overflow: hidden;
+  background: var(--color-soft-background);
+}
+
+/* =========================================================
+   GRID
+   ========================================================= */
+
+.about-preview__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.92fr);
+  align-items: center;
+  gap: 80px;
+}
+
+/* =========================================================
+   CONTENT
+   ========================================================= */
+
+.about-preview__content {
+  max-width: 590px;
+}
+
+.about-preview__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-bottom: 18px;
+
+  color: var(--color-primary-teal);
+
+  font-size: var(--font-size-caption);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: var(--letter-spacing-label);
+  line-height: var(--line-height-caption);
+}
+
+.about-preview__eyebrow::before {
+  content: "";
+
+  width: 26px;
+  height: 1px;
+
+  background: var(--color-gold);
+}
+
+.about-preview__content h2 {
+  max-width: 570px;
+  margin: 0;
+
+  color: var(--color-text-primary);
+
+  font-family: var(--font-heading);
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-h2);
+  letter-spacing: -0.025em;
+}
+
+.about-preview__content p {
+  margin: 18px 0 0;
+
+  color: var(--color-text-secondary);
+
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body);
+}
+
+.about-preview__content .about-preview__lead {
+  margin-top: 24px;
+
+  color: var(--color-text-primary);
+
+  font-size: var(--font-size-body-large);
+  line-height: var(--line-height-body-large);
+}
+
+/* =========================================================
+   APPROACH POINTS
+   ========================================================= */
+
+.about-preview__points {
+  display: grid;
+  gap: 11px;
+
+  margin-top: 26px;
+}
+
+.about-preview__point {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  color: var(--color-text-primary);
+
+  font-size: 14px;
+  font-weight: var(--font-weight-medium);
+}
+
+.about-preview__check {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  flex: 0 0 24px;
+
+  width: 24px;
+  height: 24px;
+
+  border-radius: 50%;
+
+  background: var(--color-light-teal-surface);
+  color: var(--color-primary-teal);
+}
+
+/* =========================================================
+   ABOUT LINK
+   ========================================================= */
+
+.about-preview__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+
+  margin-top: 30px;
+
+  color: var(--color-primary-teal);
+
+  font-size: 14px;
+  font-weight: var(--font-weight-semibold);
+  text-decoration: none;
+
+  transition:
+    color var(--transition-fast),
+    gap var(--transition-fast);
+}
+
+.about-preview__link:hover {
+  color: var(--color-deep-teal);
+  gap: 13px;
+}
+
+/* =========================================================
+   TECHNICAL VISUAL
+   ========================================================= */
+
+.about-preview__visual {
+  position: relative;
+  min-height: 520px;
+}
+
+.about-preview__visual-frame {
+  position: absolute;
+  inset: 0;
+
+  overflow: hidden;
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-large);
+
+  background:
+    linear-gradient(
+      145deg,
+      var(--color-deep-teal) 0%,
+      var(--color-primary-teal) 100%
+    );
+
+  box-shadow: var(--shadow-card);
+}
+
+/* Grid */
+
+.about-preview__technical-grid {
+  position: absolute;
+  inset: 0;
+
+  opacity: 0.15;
+
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.18) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.18) 1px,
+      transparent 1px
+    );
+
+  background-size: 44px 44px;
+}
+
+/* Technical drawing */
+
+.about-preview__drawing {
+  position: absolute;
+  inset: 58px 52px 52px;
+
+  border: 1px solid rgba(255, 255, 255, 0.20);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.09),
+      rgba(255, 255, 255, 0.025)
+    );
+
+  transform:
+    perspective(900px)
+    rotateY(-8deg)
+    rotateX(2deg);
+
+  box-shadow:
+    0 24px 60px rgba(0, 0, 0, 0.20),
+    inset 0 0 50px rgba(255, 255, 255, 0.025);
+}
+
+/* Drawing header */
+
+.about-preview__drawing-header {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 16px 18px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+
+  color: rgba(255, 255, 255, 0.60);
+
+  font-size: 9px;
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.14em;
+}
+
+/* Drawing main */
+
+.about-preview__drawing-main {
+  position: absolute;
+  inset: 72px 45px 70px;
+}
+
+/* Column */
+
+.about-preview__column {
+  position: absolute;
+  left: 17%;
+  top: 8%;
+
+  width: 42px;
+  height: 75%;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.about-preview__column::before,
+.about-preview__column::after {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+
+  width: 1px;
+
+  background: rgba(240, 212, 119, 0.60);
+}
+
+.about-preview__column::before {
+  left: 4px;
+}
+
+.about-preview__column::after {
+  right: 4px;
+}
+
+.about-preview__column span {
+  position: relative;
+  z-index: 1;
+
+  width: 4px;
+  height: 100%;
+
+  border-radius: 999px;
+
+  background:
+    linear-gradient(
+      180deg,
+      var(--color-gold-light),
+      var(--color-gold-dark)
+    );
+}
+
+/* Beam */
+
+.about-preview__beam {
+  position: absolute;
+  left: 17%;
+  top: 35%;
+
+  width: 67%;
+  height: 100px;
+
+  border-top: 1px solid rgba(240, 212, 119, 0.55);
+  border-bottom: 1px solid rgba(240, 212, 119, 0.55);
+
+  transform: rotate(-5deg);
+}
+
+.about-preview__beam div {
+  position: absolute;
+  left: 0;
+  right: 0;
+
+  height: 1px;
+
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.about-preview__beam div:nth-child(1) {
+  top: 24%;
+}
+
+.about-preview__beam div:nth-child(2) {
+  top: 50%;
+}
+
+.about-preview__beam div:nth-child(3) {
+  top: 76%;
+}
+
+/* Rebar */
+
+.about-preview__rebar {
+  position: absolute;
+  right: 8%;
+  top: 14%;
+
+  width: 40%;
+  height: 70%;
+
+  display: flex;
+  justify-content: space-between;
+
+  transform: rotate(-9deg);
+}
+
+.about-preview__rebar span {
+  width: 4px;
+  height: 100%;
+
+  border-radius: 999px;
+
+  background:
+    linear-gradient(
+      180deg,
+      var(--color-gold-light),
+      var(--color-gold),
+      var(--color-gold-dark)
+    );
+}
+
+/* Dimensions */
+
+.about-preview__dimension {
+  position: absolute;
+
+  color: rgba(240, 212, 119, 0.68);
+
+  font-size: 9px;
+  letter-spacing: 0.12em;
+}
+
+.about-preview__dimension--one {
+  left: 18%;
+  bottom: 16%;
+}
+
+.about-preview__dimension--two {
+  right: 12%;
+  top: 27%;
+  writing-mode: vertical-rl;
+}
+
+/* Drawing footer */
+
+.about-preview__drawing-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  justify-content: space-between;
+
+  padding: 14px 18px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+
+  color: rgba(255, 255, 255, 0.48);
+
+  font-size: 9px;
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.12em;
+}
+
+/* =========================================================
+   FLOATING BADGE
+   ========================================================= */
+
+.about-preview__badge {
+  position: absolute;
+  left: 24px;
+  bottom: 24px;
+
+  display: flex;
+  align-items: center;
+  gap: 11px;
+
+  padding: 13px 16px;
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: var(--radius-standard);
+
+  background: rgba(3, 31, 30, 0.72);
+
+  color: var(--color-white);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.about-preview__badge > svg {
+  color: var(--color-gold-light);
+}
+
+.about-preview__badge span {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.about-preview__badge strong {
+  font-size: 12px;
+  font-weight: var(--font-weight-semibold);
+}
+
+.about-preview__badge small {
+  color: rgba(255, 255, 255, 0.58);
+  font-size: 10px;
+}
+
+/* Decorative compass */
+
+.about-preview__compass {
+  position: absolute;
+  right: -28px;
+  bottom: -28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 120px;
+  height: 120px;
+
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+
+  color: var(--color-primary-teal);
+
+  opacity: 0.35;
+}
+
+/* =========================================================
+   LAPTOP
+   ========================================================= */
+
+@media (max-width: 1279px) {
+  .about-preview__grid {
+    gap: 56px;
+  }
+
+  .about-preview__visual {
+    min-height: 480px;
+  }
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1023px) {
+  .about-preview {
+    padding: var(--section-padding-tablet) 0;
+  }
+
+  .about-preview__grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .about-preview__content {
+    max-width: 720px;
+  }
+
+  .about-preview__visual {
+    min-height: 500px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+  .about-preview {
+    padding: var(--section-padding-mobile) 0;
+  }
+
+  .about-preview__content h2 {
+    font-size: 32px;
+  }
+
+  .about-preview__content .about-preview__lead {
+    margin-top: 20px;
+    font-size: 17px;
+  }
+
+  .about-preview__content p {
+    font-size: 15px;
+  }
+
+  .about-preview__visual {
+    min-height: 390px;
+  }
+
+  .about-preview__drawing {
+    inset: 42px 30px 40px;
+  }
+
+  .about-preview__badge {
+    left: 14px;
+    bottom: 14px;
+  }
+
+  .about-preview__compass {
+    width: 90px;
+    height: 90px;
+    right: -20px;
+    bottom: -20px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 479px) {
+  .about-preview__content h2 {
+    font-size: 28px;
+  }
+
+  .about-preview__visual {
+    min-height: 330px;
+  }
+
+  .about-preview__drawing {
+    inset: 34px 20px 34px;
+  }
+
+  .about-preview__drawing-header,
+  .about-preview__drawing-footer {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .about-preview__drawing-main {
+    inset-left: 20px;
+    inset-right: 20px;
+  }
+
+  .about-preview__badge {
+    padding: 10px 12px;
+  }
+
+  .about-preview__badge strong {
+    font-size: 11px;
+  }
+}
