@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom";
 import {
   ArrowRight,
@@ -68,7 +69,10 @@ function ServicesOverview() {
       className="services-overview"
       aria-labelledby="services-overview-title"
     >
-      <div className="container">
+      {/* FULL-WIDTH FLUID CONTAINER */}
+      <div className="services-overview__container">
+
+        {/* SECTION HEADER */}
         <div className="services-overview__header">
           <div className="services-overview__heading">
             <span className="services-overview__eyebrow">
@@ -88,58 +92,72 @@ function ServicesOverview() {
           </p>
         </div>
 
-        <div className="services-overview__grid">
-          {services.map((service) => {
-            const Icon = service.icon;
+        {/* HORIZONTAL SCROLLABLE SERVICES */}
+        <div
+          className="services-overview__scroll"
+          role="region"
+          aria-label="Our engineering services. Scroll horizontally to explore all services."
+          tabIndex={0}
+        >
+          <div className="services-overview__track">
+            {services.map((service) => {
+              const Icon = service.icon;
 
-            return (
-              <article
-                className="services-overview__card"
-                key={service.number}
-              >
-                <div className="services-overview__card-top">
-                  <span className="services-overview__number">
-                    {service.number}
-                  </span>
+              return (
+                <article
+                  className="services-overview__card"
+                  key={service.number}
+                >
+                  {/* CARD TOP */}
+                  <div className="services-overview__card-top">
+                    <span className="services-overview__number">
+                      {service.number}
+                    </span>
 
-                  <span className="services-overview__icon">
-                    <Icon
-                      size={22}
-                      strokeWidth={1.6}
+                    <span className="services-overview__icon">
+                      <Icon
+                        size={21}
+                        strokeWidth={1.6}
+                        aria-hidden="true"
+                      />
+                    </span>
+                  </div>
+
+                  {/* CARD CONTENT */}
+                  <div className="services-overview__card-content">
+                    <h3>{service.title}</h3>
+
+                    <p>{service.description}</p>
+                  </div>
+
+                  {/* CARD LINK */}
+                  <Link
+                    to={service.href}
+                    className="services-overview__link"
+                    aria-label={`Learn more about ${service.title}`}
+                  >
+                    Learn More
+
+                    <ArrowRight
+                      size={16}
+                      strokeWidth={1.8}
                       aria-hidden="true"
                     />
-                  </span>
-                </div>
-
-                <div className="services-overview__card-content">
-                  <h3>{service.title}</h3>
-
-                  <p>{service.description}</p>
-                </div>
-
-                <Link
-                  to={service.href}
-                  className="services-overview__link"
-                  aria-label={`Learn more about ${service.title}`}
-                >
-                  Learn More
-                  <ArrowRight
-                    size={16}
-                    strokeWidth={1.8}
-                    aria-hidden="true"
-                  />
-                </Link>
-              </article>
-            );
-          })}
+                  </Link>
+                </article>
+              );
+            })}
+          </div>
         </div>
 
+        {/* VIEW ALL SERVICES */}
         <div className="services-overview__footer">
           <Link
             to="/services"
             className="services-overview__all-link"
           >
             View All Services
+
             <ArrowRight
               size={17}
               strokeWidth={1.8}
@@ -147,6 +165,7 @@ function ServicesOverview() {
             />
           </Link>
         </div>
+
       </div>
     </section>
   );

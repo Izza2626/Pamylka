@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom";
 import {
   ArrowRight,
@@ -49,79 +50,63 @@ function WhyChoosePAMYLKA() {
     >
       <div className="container">
         <div className="why-choose-pamylka__grid">
+
+          {/* IMAGE VISUAL */}
           <div className="why-choose-pamylka__visual">
-            <div className="why-choose-pamylka__visual-frame">
-              <div
-                className="why-choose-pamylka__grid-lines"
-                aria-hidden="true"
+
+            <div className="why-choose-pamylka__image-frame">
+
+              <img
+                src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1200&q=85"
+                alt="Construction site showing structural engineering and building work"
+                className="why-choose-pamylka__image"
+                loading="lazy"
               />
 
-              <div
-                className="why-choose-pamylka__drawing"
-                aria-hidden="true"
-              >
-                <div className="why-choose-pamylka__drawing-top">
-                  <span>STRUCTURAL DETAIL</span>
-                  <span>A-01</span>
-                </div>
+              <div className="why-choose-pamylka__image-overlay" />
 
-                <div className="why-choose-pamylka__drawing-area">
-                  <div className="why-choose-pamylka__vertical">
-                    <span />
-                    <span />
-                    <span />
-                  </div>
+              {/* IMAGE TOP LABEL */}
+              <div className="why-choose-pamylka__image-label">
+                <span>ENGINEERING EXCELLENCE</span>
+                <span>01 / 04</span>
+              </div>
 
-                  <div className="why-choose-pamylka__horizontal">
-                    <span />
-                    <span />
-                    <span />
-                    <span />
-                  </div>
+              {/* IMAGE BOTTOM CONTENT */}
+              <div className="why-choose-pamylka__image-caption">
+                <span className="why-choose-pamylka__caption-line" />
 
-                  <div className="why-choose-pamylka__bars">
-                    <span />
-                    <span />
-                    <span />
-                    <span />
-                    <span />
-                    <span />
-                    <span />
-                  </div>
+                <p>Precision in every detail.</p>
 
-                  <div className="why-choose-pamylka__dimension why-choose-pamylka__dimension--horizontal">
-                    6000
-                  </div>
+                <h3>
+                  Built Around
+                  <br />
+                  Construction Needs.
+                </h3>
+              </div>
 
-                  <div className="why-choose-pamylka__dimension why-choose-pamylka__dimension--vertical">
-                    300
-                  </div>
-                </div>
+              {/* FLOATING TECHNICAL CARD */}
+              <div className="why-choose-pamylka__floating-card">
+                <span className="why-choose-pamylka__floating-icon">
+                  <Check size={17} strokeWidth={2.2} />
+                </span>
 
-                <div className="why-choose-pamylka__drawing-bottom">
-                  <span>REBAR DETAILING</span>
-                  <span>REV. 01</span>
+                <div>
+                  <strong>Detailing with precision</strong>
+                  <span>Clarity. Coordination. Confidence.</span>
                 </div>
               </div>
 
-              <div className="why-choose-pamylka__technical-tag">
-                <Check
-                  size={16}
-                  strokeWidth={2}
-                  aria-hidden="true"
-                />
-
-                <span>Detailing with precision</span>
-              </div>
-
+              {/* DECORATIVE GOLD CORNER */}
               <div
-                className="why-choose-pamylka__accent"
+                className="why-choose-pamylka__image-corner"
                 aria-hidden="true"
               />
             </div>
           </div>
 
+          {/* CONTENT */}
           <div className="why-choose-pamylka__content">
+
             <span className="why-choose-pamylka__eyebrow">
               WHY PAMYLKA
             </span>
@@ -137,6 +122,7 @@ function WhyChoosePAMYLKA() {
               information.
             </p>
 
+            {/* STRENGTHS */}
             <div className="why-choose-pamylka__strengths">
               {strengths.map((strength) => {
                 const Icon = strength.icon;
@@ -146,20 +132,21 @@ function WhyChoosePAMYLKA() {
                     className="why-choose-pamylka__strength"
                     key={strength.number}
                   >
-                    <div className="why-choose-pamylka__strength-number">
+                    <span className="why-choose-pamylka__strength-number">
                       {strength.number}
-                    </div>
+                    </span>
 
-                    <div className="why-choose-pamylka__strength-icon">
+                    <span className="why-choose-pamylka__strength-icon">
                       <Icon
                         size={19}
-                        strokeWidth={1.6}
+                        strokeWidth={1.7}
                         aria-hidden="true"
                       />
-                    </div>
+                    </span>
 
                     <div className="why-choose-pamylka__strength-content">
                       <h3>{strength.title}</h3>
+
                       <p>{strength.description}</p>
                     </div>
                   </article>
@@ -167,17 +154,20 @@ function WhyChoosePAMYLKA() {
               })}
             </div>
 
+            {/* CTA */}
             <Link
               to="/contact"
               className="why-choose-pamylka__cta"
             >
               Discuss Your Project
+
               <ArrowRight
                 size={17}
                 strokeWidth={1.8}
                 aria-hidden="true"
               />
             </Link>
+
           </div>
         </div>
       </div>

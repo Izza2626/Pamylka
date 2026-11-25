@@ -56,24 +56,22 @@ function Navbar() {
   return (
     <header className="navbar">
       <div className="navbar__container">
-        {/* BRAND */}
+
+        {/* BRAND LOGO */}
         <Link
           to="/"
           className="navbar__brand"
           aria-label="PAMYLKA Engineering Services Home"
           onClick={closeMobileMenu}
         >
-          <span className="navbar__brand-mark" aria-hidden="true">
-            P
-          </span>
-
-          <span className="navbar__brand-text">
-            <span className="navbar__brand-name">PAMYLKA</span>
-
-            <span className="navbar__brand-subtitle">
-              ENGINEERING SERVICES
-            </span>
-          </span>
+          <img
+            src="/images/brand/pamylka-logo-horizontal.svg"
+            alt="PAMYLKA Engineering Services"
+            className="navbar__logo"
+            width="190"
+            height="64"
+            fetchPriority="high"
+          />
         </Link>
 
         {/* DESKTOP NAVIGATION */}
